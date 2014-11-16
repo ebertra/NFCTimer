@@ -8,7 +8,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="480">
+        <Button x:Name="StartStopButton" Content="{Binding Path=StartStopButtonLabel, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Command="{Binding Path=StartStopTimerCommand}" Height="75" Width="183" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,347,86,346"/>
+        <Button x:Name="ResetButton" Content="Reset" Command="{Binding Path=ResetTimerCommand}" Height="75" Width="206" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,347,0,346"/>
+        <TextBox HorizontalAlignment="Left" Height="341" TextWrapping="Wrap" VerticalAlignment="Top" Width="384" FontSize="120" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding Path=Time, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="10,10,0,0"/>
     </Grid>
+
 </Page>

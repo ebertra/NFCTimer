@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using NFCTimer.ViewModel;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -22,11 +23,16 @@ namespace NFCTimer
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
         public MainPage()
         {
             this.InitializeComponent();
 
+            MainViewModel mainViewModel = new MainViewModel();
+            DataContext = mainViewModel;
+
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
         }
 
         /// <summary>
@@ -44,5 +50,6 @@ namespace NFCTimer
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
     }
 }
